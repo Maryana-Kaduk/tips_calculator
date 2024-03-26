@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Калькулятор чайових</title>
+</head>
+<body>
+    <img src="./images/splitter.svg" alt="" class="heading">
+    <form id="calculator" class="calculator">
+        <article class="info">
+            <section class="bill">
+                <label for="billInput" class="number__input-label name">Bill</label>
+                <input type="number" name="billInput" id="billInput" placeholder="0" class="numberInput">
+            </section>
+            <section class="select__tip">
+                <span class="name">Select Tip %</span>
+                <section class="tip__wrapper">
+                    <article class="tip__amount-wrapper">
+                        <input type="radio" name="percent" id="fivePercent" value="5%">
+                        <label for="fivePercent" class="selection">5%</label>
+                    </article>
+                    <article class="tip__amount-wrapper">
+                        <input type="radio" name="percent" id="tenPercent" value="10%">
+                        <label for="tenPercent" class="selection">10%</label>
+                    </article>
+                    <article class="tip__amount-wrapper">
+                        <input type="radio" name="percent" id="fifteenPercent" value="15%">
+                        <label for="fifteenPercent" class="selection">15%</label>
+                    </article>
+                    <article class="tip__amount-wrapper">
+                        <input type="radio" name="percent" id="twentyfivePercent" value="25%">
+                        <label for="twentyfivePercent" class="selection">25%</label>
+                    </article>
+                    <article class="tip__amount-wrapper">
+                        <input type="radio" name="percent" id="fiftyPercent" value="50%">
+                        <label for="fiftyPercent" class="selection">50%</label>
+                    </article>
+                    <input type="number" placeholder="Custom" class="custom">
+                </section>
+            </section>
+            <section class="number__of-people">
+                <span>Can`t be zero</span>
+                <label for="numberOfPeopleInput" class="number__input-label name">Number of People</label>
+                <input type="number" name="numberOfPeopleInput" id="numberOfPeopleInput" placeholder="0" class="numberInput">
+            </section>
+        </article>
+        <article class="answer">
+            <section class="result">
+                <article class="info__wrapper">
+                    <h3>Tip Amount</h3>
+                    <span class="additional">/ person</span>
+                </article>
+                <h2 id="tipAmount">$<span class="sum">0.00</span></h2>
+            </section>
+            <section class="result">
+                <article class="info__wrapper">
+                    <h3>Total</h3>
+                    <span class="additional">/ person</span>
+                </article>
+                <h2 id="total">$<span class="sum">0.00</span></h2>
+            </section>
+            <button type="button" class="calculate" disabled>calculate</button>
+        </article>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
